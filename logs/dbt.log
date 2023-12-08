@@ -1,0 +1,412 @@
+[0m19:21:49.131641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5fd550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5fc150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a62ba50>]}
+
+
+============================== 19:21:49.141175 | f9330b9a-7a7f-48bb-ac0c-ddd572135a8e ==============================
+[0m19:21:49.141175 [info ] [MainThread]: Running with dbt=1.7.3
+[0m19:21:49.142030 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/shohei.hagiwara/tmp/20231208/jaffle_shop/logs', 'profiles_dir': '/Users/shohei.hagiwara/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:21:49.142842 [info ] [MainThread]: dbt version: 1.7.3
+[0m19:21:49.143565 [info ] [MainThread]: python version: 3.11.6
+[0m19:21:49.144079 [info ] [MainThread]: python path: /usr/local/opt/python@3.11/bin/python3.11
+[0m19:21:49.144518 [info ] [MainThread]: os info: macOS-12.7-x86_64-i386-64bit
+[0m19:21:49.426497 [info ] [MainThread]: Using profiles dir at /Users/shohei.hagiwara/.dbt
+[0m19:21:49.427060 [info ] [MainThread]: Using profiles.yml file at /Users/shohei.hagiwara/.dbt/profiles.yml
+[0m19:21:49.427431 [info ] [MainThread]: Using dbt_project.yml file at /Users/shohei.hagiwara/tmp/20231208/jaffle_shop/dbt_project.yml
+[0m19:21:49.429394 [info ] [MainThread]: adapter type: snowflake
+[0m19:21:49.429851 [info ] [MainThread]: adapter version: 1.7.1
+[0m19:21:49.497136 [info ] [MainThread]: Configuration:
+[0m19:21:49.497555 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:21:49.497913 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:21:49.498263 [info ] [MainThread]: Required dependencies:
+[0m19:21:49.498675 [debug] [MainThread]: Executing "git --help"
+[0m19:21:49.507273 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:21:49.508656 [debug] [MainThread]: STDERR: "b''"
+[0m19:21:49.509246 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:21:49.509598 [info ] [MainThread]: Connection:
+[0m19:21:49.510253 [info ] [MainThread]:   account: chura_data.ap-northeast-1.aws
+[0m19:21:49.510611 [info ] [MainThread]:   user: s.hagiwara@churadata.okinawa
+[0m19:21:49.510967 [info ] [MainThread]:   database: HAGIWARA_TRAINING_DB
+[0m19:21:49.511271 [info ] [MainThread]:   warehouse: HAGIWARA_TRAINING_WH
+[0m19:21:49.511659 [info ] [MainThread]:   role: public
+[0m19:21:49.512000 [info ] [MainThread]:   schema: PUBLIC
+[0m19:21:49.512332 [info ] [MainThread]:   authenticator: externalbrowser
+[0m19:21:49.512642 [info ] [MainThread]:   private_key_path: None
+[0m19:21:49.512936 [info ] [MainThread]:   token: None
+[0m19:21:49.513231 [info ] [MainThread]:   oauth_client_id: None
+[0m19:21:49.513528 [info ] [MainThread]:   query_tag: None
+[0m19:21:49.513826 [info ] [MainThread]:   client_session_keep_alive: False
+[0m19:21:49.514122 [info ] [MainThread]:   host: None
+[0m19:21:49.514421 [info ] [MainThread]:   port: None
+[0m19:21:49.514716 [info ] [MainThread]:   proxy_host: None
+[0m19:21:49.515010 [info ] [MainThread]:   proxy_port: None
+[0m19:21:49.515301 [info ] [MainThread]:   protocol: None
+[0m19:21:49.515592 [info ] [MainThread]:   connect_retries: 1
+[0m19:21:49.515887 [info ] [MainThread]:   connect_timeout: None
+[0m19:21:49.516183 [info ] [MainThread]:   retry_on_database_errors: False
+[0m19:21:49.516475 [info ] [MainThread]:   retry_all: False
+[0m19:21:49.516764 [info ] [MainThread]:   insecure_mode: False
+[0m19:21:49.517056 [info ] [MainThread]:   reuse_connections: None
+[0m19:21:49.517789 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m19:21:49.525812 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m19:21:49.528086 [debug] [MainThread]: Using snowflake connection "debug"
+[0m19:21:49.528547 [debug] [MainThread]: On debug: select 1 as id
+[0m19:21:49.528969 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:21:57.314651 [debug] [MainThread]: SQL status: SUCCESS 1 in 8.0 seconds
+[0m19:21:57.317020 [debug] [MainThread]: On debug: Close
+[0m19:21:57.506374 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:21:57.507080 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:21:57.509061 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 8.437101, "process_user_time": 2.212848, "process_kernel_time": 0.357687, "process_mem_max_rss": "124596224", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:21:57.509990 [debug] [MainThread]: Command `dbt debug` succeeded at 19:21:57.509791 after 8.44 seconds
+[0m19:21:57.510505 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:21:57.511102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5cead0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105701f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105884a90>]}
+[0m19:21:57.511731 [debug] [MainThread]: Flushing usage events
+[0m19:23:44.081376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10748e950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074e52d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074e5e50>]}
+
+
+============================== 19:23:44.086766 | 56f45b62-0c94-4793-94fe-e6a842b974c1 ==============================
+[0m19:23:44.086766 [info ] [MainThread]: Running with dbt=1.7.3
+[0m19:23:44.087531 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/shohei.hagiwara/tmp/20231208/jaffle_shop/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/shohei.hagiwara/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:23:44.514003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '56f45b62-0c94-4793-94fe-e6a842b974c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108063010>]}
+[0m19:23:44.592194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '56f45b62-0c94-4793-94fe-e6a842b974c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10748fed0>]}
+[0m19:23:44.592892 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m19:23:44.608281 [debug] [MainThread]: checksum: c95636796e12235e48c0560a0bb6a50e98827ef72e7ea1fe07a97c38c91661e1, vars: {}, profile: , target: , version: 1.7.3
+[0m19:23:44.609066 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:23:44.609615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '56f45b62-0c94-4793-94fe-e6a842b974c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080fab90>]}
+[0m19:23:45.611360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '56f45b62-0c94-4793-94fe-e6a842b974c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108413f50>]}
+[0m19:23:45.620039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '56f45b62-0c94-4793-94fe-e6a842b974c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10863ae10>]}
+[0m19:23:45.620498 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m19:23:45.620857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '56f45b62-0c94-4793-94fe-e6a842b974c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108070a50>]}
+[0m19:23:45.622478 [info ] [MainThread]: 
+[0m19:23:45.623261 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:23:45.624220 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HAGIWARA_TRAINING_DB'
+[0m19:23:45.635940 [debug] [ThreadPool]: Using snowflake connection "list_HAGIWARA_TRAINING_DB"
+[0m19:23:45.636323 [debug] [ThreadPool]: On list_HAGIWARA_TRAINING_DB: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_HAGIWARA_TRAINING_DB"} */
+show terse schemas in database HAGIWARA_TRAINING_DB
+    limit 10000
+[0m19:23:45.636646 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:23:53.806864 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b0d94f-0001-2ced-0000-1105013562ca
+[0m19:23:53.807749 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m19:23:53.808682 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m19:23:53.809234 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m19:23:53.809943 [debug] [ThreadPool]: On list_HAGIWARA_TRAINING_DB: Close
+[0m19:23:53.999037 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:23:53.999510 [debug] [MainThread]: Connection 'list_HAGIWARA_TRAINING_DB' was properly closed.
+[0m19:23:53.999977 [info ] [MainThread]: 
+[0m19:23:54.000468 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 8.38 seconds (8.38s).
+[0m19:23:54.001407 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "HAGIWARA_TRAINING_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m19:23:54.002943 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 9.973498, "process_user_time": 3.14261, "process_kernel_time": 0.289006, "process_mem_max_rss": "134426624", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:23:54.003694 [debug] [MainThread]: Command `dbt run` failed at 19:23:54.003520 after 9.97 seconds
+[0m19:23:54.004383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106803190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10258a250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10270fad0>]}
+[0m19:23:54.004975 [debug] [MainThread]: Flushing usage events
+[0m19:25:11.222436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1140cd850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114125090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114125b90>]}
+
+
+============================== 19:25:11.227980 | 4593540b-ece4-48b3-99e6-043606ee0094 ==============================
+[0m19:25:11.227980 [info ] [MainThread]: Running with dbt=1.7.3
+[0m19:25:11.228637 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/shohei.hagiwara/tmp/20231208/jaffle_shop/logs', 'debug': 'False', 'profiles_dir': '/Users/shohei.hagiwara/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:25:11.522805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4593540b-ece4-48b3-99e6-043606ee0094', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114b26ad0>]}
+[0m19:25:11.601841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4593540b-ece4-48b3-99e6-043606ee0094', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114bcf910>]}
+[0m19:25:11.602584 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m19:25:11.617872 [debug] [MainThread]: checksum: c95636796e12235e48c0560a0bb6a50e98827ef72e7ea1fe07a97c38c91661e1, vars: {}, profile: , target: , version: 1.7.3
+[0m19:25:11.627365 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m19:25:11.628018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4593540b-ece4-48b3-99e6-043606ee0094', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114dd3610>]}
+[0m19:25:12.632086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4593540b-ece4-48b3-99e6-043606ee0094', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11503af10>]}
+[0m19:25:12.640275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4593540b-ece4-48b3-99e6-043606ee0094', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1151b94d0>]}
+[0m19:25:12.640722 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m19:25:12.641069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4593540b-ece4-48b3-99e6-043606ee0094', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114d7dad0>]}
+[0m19:25:12.642700 [info ] [MainThread]: 
+[0m19:25:12.643408 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:25:12.644330 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HAGIWARA_TRAINING_DB'
+[0m19:25:12.655645 [debug] [ThreadPool]: Using snowflake connection "list_HAGIWARA_TRAINING_DB"
+[0m19:25:12.655989 [debug] [ThreadPool]: On list_HAGIWARA_TRAINING_DB: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_HAGIWARA_TRAINING_DB"} */
+show terse schemas in database HAGIWARA_TRAINING_DB
+    limit 10000
+[0m19:25:12.656297 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:25:19.097177 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 6.0 seconds
+[0m19:25:19.099920 [debug] [ThreadPool]: On list_HAGIWARA_TRAINING_DB: Close
+[0m19:25:19.278123 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_HAGIWARA_TRAINING_DB, now list_HAGIWARA_TRAINING_DB_PUBLIC)
+[0m19:25:19.289613 [debug] [ThreadPool]: Using snowflake connection "list_HAGIWARA_TRAINING_DB_PUBLIC"
+[0m19:25:19.290083 [debug] [ThreadPool]: On list_HAGIWARA_TRAINING_DB_PUBLIC: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_HAGIWARA_TRAINING_DB_PUBLIC"} */
+show terse objects in HAGIWARA_TRAINING_DB.PUBLIC limit 10000
+[0m19:25:19.290522 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:25:26.967107 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 8.0 seconds
+[0m19:25:26.970737 [debug] [ThreadPool]: On list_HAGIWARA_TRAINING_DB_PUBLIC: Close
+[0m19:25:27.151353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4593540b-ece4-48b3-99e6-043606ee0094', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1150ed250>]}
+[0m19:25:27.152779 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:25:27.153369 [info ] [MainThread]: 
+[0m19:25:27.164719 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_first_dbt_model
+[0m19:25:27.165502 [info ] [Thread-1 (]: 1 of 2 START sql table model PUBLIC.my_first_dbt_model ......................... [RUN]
+[0m19:25:27.166538 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_HAGIWARA_TRAINING_DB_PUBLIC, now model.jaffle_shop.my_first_dbt_model)
+[0m19:25:27.167077 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_first_dbt_model
+[0m19:25:27.177088 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_first_dbt_model"
+[0m19:25:27.178455 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.my_first_dbt_model (compile): 19:25:27.167419 => 19:25:27.178102
+[0m19:25:27.179001 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_first_dbt_model
+[0m19:25:27.211874 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_first_dbt_model"
+[0m19:25:27.213580 [debug] [Thread-1 (]: Using snowflake connection "model.jaffle_shop.my_first_dbt_model"
+[0m19:25:27.214093 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+create or replace transient table HAGIWARA_TRAINING_DB.PUBLIC.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m19:25:27.214564 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:25:35.589771 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 8.0 seconds
+[0m19:25:35.615431 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.my_first_dbt_model (execute): 19:25:27.179322 => 19:25:35.615081
+[0m19:25:35.616044 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: Close
+[0m19:25:35.793690 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4593540b-ece4-48b3-99e6-043606ee0094', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11525c190>]}
+[0m19:25:35.794833 [info ] [Thread-1 (]: 1 of 2 OK created sql table model PUBLIC.my_first_dbt_model .................... [[32mSUCCESS 1[0m in 8.63s]
+[0m19:25:35.795944 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_first_dbt_model
+[0m19:25:35.797194 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_second_dbt_model
+[0m19:25:35.797993 [info ] [Thread-1 (]: 2 of 2 START sql view model PUBLIC.my_second_dbt_model ......................... [RUN]
+[0m19:25:35.799071 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.my_first_dbt_model, now model.jaffle_shop.my_second_dbt_model)
+[0m19:25:35.799614 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_second_dbt_model
+[0m19:25:35.805562 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_second_dbt_model"
+[0m19:25:35.806535 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.my_second_dbt_model (compile): 19:25:35.799949 => 19:25:35.806224
+[0m19:25:35.807031 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_second_dbt_model
+[0m19:25:35.834184 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_second_dbt_model"
+[0m19:25:35.835391 [debug] [Thread-1 (]: Using snowflake connection "model.jaffle_shop.my_second_dbt_model"
+[0m19:25:35.835889 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_second_dbt_model"} */
+create or replace   view HAGIWARA_TRAINING_DB.PUBLIC.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from HAGIWARA_TRAINING_DB.PUBLIC.my_first_dbt_model
+where id = 1
+  );
+[0m19:25:35.836366 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:25:41.650459 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 6.0 seconds
+[0m19:25:41.656390 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.my_second_dbt_model (execute): 19:25:35.807343 => 19:25:41.656060
+[0m19:25:41.656950 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: Close
+[0m19:25:41.900295 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4593540b-ece4-48b3-99e6-043606ee0094', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1152b7410>]}
+[0m19:25:41.901274 [info ] [Thread-1 (]: 2 of 2 OK created sql view model PUBLIC.my_second_dbt_model .................... [[32mSUCCESS 1[0m in 6.10s]
+[0m19:25:41.902141 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_second_dbt_model
+[0m19:25:41.904684 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:25:41.905127 [debug] [MainThread]: Connection 'model.jaffle_shop.my_second_dbt_model' was properly closed.
+[0m19:25:41.905587 [info ] [MainThread]: 
+[0m19:25:41.906069 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 29.26 seconds (29.26s).
+[0m19:25:41.907156 [debug] [MainThread]: Command end result
+[0m19:25:41.919896 [info ] [MainThread]: 
+[0m19:25:41.920545 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:25:41.921082 [info ] [MainThread]: 
+[0m19:25:41.921593 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m19:25:41.923120 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 30.751373, "process_user_time": 3.453009, "process_kernel_time": 0.31799, "process_mem_max_rss": "139268096", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:25:41.923910 [debug] [MainThread]: Command `dbt run` succeeded at 19:25:41.923730 after 30.75 seconds
+[0m19:25:41.924595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11410b210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11410b550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f295e90>]}
+[0m19:25:41.925109 [debug] [MainThread]: Flushing usage events
+[0m19:27:12.411067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e11df50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e16f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e189e50>]}
+
+
+============================== 19:27:12.416447 | 5431d807-7be5-4bb2-a5d0-90a2d8b920bc ==============================
+[0m19:27:12.416447 [info ] [MainThread]: Running with dbt=1.7.3
+[0m19:27:12.417104 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/shohei.hagiwara/tmp/20231208/jaffle_shop/logs', 'debug': 'False', 'profiles_dir': '/Users/shohei.hagiwara/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt test', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:27:12.719512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5431d807-7be5-4bb2-a5d0-90a2d8b920bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ed32290>]}
+[0m19:27:12.801459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5431d807-7be5-4bb2-a5d0-90a2d8b920bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ecff350>]}
+[0m19:27:12.802170 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m19:27:12.817211 [debug] [MainThread]: checksum: c95636796e12235e48c0560a0bb6a50e98827ef72e7ea1fe07a97c38c91661e1, vars: {}, profile: , target: , version: 1.7.3
+[0m19:27:12.826206 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m19:27:12.826878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '5431d807-7be5-4bb2-a5d0-90a2d8b920bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ee9af10>]}
+[0m19:27:13.814073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5431d807-7be5-4bb2-a5d0-90a2d8b920bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f20d1d0>]}
+[0m19:27:13.822650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5431d807-7be5-4bb2-a5d0-90a2d8b920bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f21f350>]}
+[0m19:27:13.823090 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m19:27:13.823437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5431d807-7be5-4bb2-a5d0-90a2d8b920bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10edec210>]}
+[0m19:27:13.825250 [info ] [MainThread]: 
+[0m19:27:13.826091 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:27:13.827110 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HAGIWARA_TRAINING_DB_PUBLIC'
+[0m19:27:13.839961 [debug] [ThreadPool]: Using snowflake connection "list_HAGIWARA_TRAINING_DB_PUBLIC"
+[0m19:27:13.840316 [debug] [ThreadPool]: On list_HAGIWARA_TRAINING_DB_PUBLIC: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_HAGIWARA_TRAINING_DB_PUBLIC"} */
+show terse objects in HAGIWARA_TRAINING_DB.PUBLIC limit 10000
+[0m19:27:13.840624 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:27:20.812080 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 7.0 seconds
+[0m19:27:20.817560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5431d807-7be5-4bb2-a5d0-90a2d8b920bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eebda10>]}
+[0m19:27:20.818691 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:27:20.819186 [info ] [MainThread]: 
+[0m19:27:20.822022 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m19:27:20.822616 [info ] [Thread-1 (]: 1 of 4 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m19:27:20.824074 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_HAGIWARA_TRAINING_DB_PUBLIC, now test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m19:27:20.824613 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m19:27:20.845924 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m19:27:20.847035 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710 (compile): 19:27:20.824949 => 19:27:20.846724
+[0m19:27:20.847526 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m19:27:20.870067 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m19:27:20.871818 [debug] [Thread-1 (]: Using snowflake connection "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m19:27:20.872345 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from HAGIWARA_TRAINING_DB.PUBLIC.my_first_dbt_model
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m19:27:21.521800 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m19:27:21.531060 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710 (execute): 19:27:20.847823 => 19:27:21.530721
+[0m19:27:21.532085 [error] [Thread-1 (]: 1 of 4 FAIL 1 not_null_my_first_dbt_model_id ................................... [[31mFAIL 1[0m in 0.71s]
+[0m19:27:21.532937 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m19:27:21.533505 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m19:27:21.534098 [info ] [Thread-1 (]: 2 of 4 START test not_null_my_second_dbt_model_id .............................. [RUN]
+[0m19:27:21.534995 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710, now test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778)
+[0m19:27:21.535491 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m19:27:21.540709 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778"
+[0m19:27:21.541630 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778 (compile): 19:27:21.535806 => 19:27:21.541335
+[0m19:27:21.542112 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m19:27:21.545567 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778"
+[0m19:27:21.546728 [debug] [Thread-1 (]: Using snowflake connection "test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778"
+[0m19:27:21.547234 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from HAGIWARA_TRAINING_DB.PUBLIC.my_second_dbt_model
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m19:27:22.872632 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m19:27:22.875870 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778 (execute): 19:27:21.542424 => 19:27:22.875505
+[0m19:27:22.877046 [info ] [Thread-1 (]: 2 of 4 PASS not_null_my_second_dbt_model_id .................................... [[32mPASS[0m in 1.34s]
+[0m19:27:22.877912 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m19:27:22.878514 [debug] [Thread-1 (]: Began running node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m19:27:22.879188 [info ] [Thread-1 (]: 3 of 4 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m19:27:22.880120 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778, now test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321)
+[0m19:27:22.880619 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m19:27:22.888712 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"
+[0m19:27:22.889663 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321 (compile): 19:27:22.880934 => 19:27:22.889359
+[0m19:27:22.890165 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m19:27:22.895213 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"
+[0m19:27:22.896527 [debug] [Thread-1 (]: Using snowflake connection "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"
+[0m19:27:22.897075 [debug] [Thread-1 (]: On test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from HAGIWARA_TRAINING_DB.PUBLIC.my_first_dbt_model
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m19:27:23.120317 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m19:27:23.123612 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321 (execute): 19:27:22.890482 => 19:27:23.123249
+[0m19:27:23.124704 [info ] [Thread-1 (]: 3 of 4 PASS unique_my_first_dbt_model_id ....................................... [[32mPASS[0m in 0.24s]
+[0m19:27:23.125487 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m19:27:23.126042 [debug] [Thread-1 (]: Began running node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m19:27:23.126611 [info ] [Thread-1 (]: 4 of 4 START test unique_my_second_dbt_model_id ................................ [RUN]
+[0m19:27:23.127473 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321, now test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493)
+[0m19:27:23.127968 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m19:27:23.133141 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493"
+[0m19:27:23.134048 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493 (compile): 19:27:23.128282 => 19:27:23.133750
+[0m19:27:23.134550 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m19:27:23.137940 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493"
+[0m19:27:23.139220 [debug] [Thread-1 (]: Using snowflake connection "test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493"
+[0m19:27:23.139740 [debug] [Thread-1 (]: On test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.7.3", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from HAGIWARA_TRAINING_DB.PUBLIC.my_second_dbt_model
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m19:27:23.372724 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m19:27:23.375957 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493 (execute): 19:27:23.134866 => 19:27:23.375576
+[0m19:27:23.377127 [info ] [Thread-1 (]: 4 of 4 PASS unique_my_second_dbt_model_id ...................................... [[32mPASS[0m in 0.25s]
+[0m19:27:23.378041 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m19:27:23.380182 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:27:23.380647 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493' was left open.
+[0m19:27:23.381101 [debug] [MainThread]: On test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493: Close
+[0m19:27:23.562002 [info ] [MainThread]: 
+[0m19:27:23.562678 [info ] [MainThread]: Finished running 4 tests in 0 hours 0 minutes and 9.74 seconds (9.74s).
+[0m19:27:23.564324 [debug] [MainThread]: Command end result
+[0m19:27:23.575256 [info ] [MainThread]: 
+[0m19:27:23.575766 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m19:27:23.576201 [info ] [MainThread]: 
+[0m19:27:23.576653 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models/example/schema.yml)[0m
+[0m19:27:23.577086 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m19:27:23.577499 [info ] [MainThread]: 
+[0m19:27:23.577941 [info ] [MainThread]:   compiled Code at target/compiled/jaffle_shop/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[0m19:27:23.578378 [info ] [MainThread]: 
+[0m19:27:23.578900 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 TOTAL=4
+[0m19:27:23.580307 [debug] [MainThread]: Resource report: {"command_name": "test", "command_wall_clock_time": 11.218575, "process_user_time": 3.265428, "process_kernel_time": 0.257959, "process_mem_max_rss": "136241152", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:27:23.581117 [debug] [MainThread]: Command `dbt test` failed at 19:27:23.580935 after 11.22 seconds
+[0m19:27:23.581674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e16f550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e11d090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10947fad0>]}
+[0m19:27:23.582178 [debug] [MainThread]: Flushing usage events
